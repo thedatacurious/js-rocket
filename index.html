@@ -1,12 +1,58 @@
 <!<!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src = "../js/script.js"></script>
+
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css">
   </head>
 
-  <body>
-    <script src = "./rocket.js"></script>
+  <body class = "body-state1">
+    <!-- <h1 id = "demo"> Rocket Launch Sequence </h1> -->
+    <div class = "left">
+      <div class = "state1">
+        <h1> JS Rocket launch! </h1>
+        <button class = "submit" onclick="changeState(2);">Launch! </button>
+      </div>
+
+      <div class = "state2">
+        <h1 id = "countdown"> 10 </h1>
+        <button id = "abort" onclick="changeState(1);"> Abort! </button>
+      </div>
+
+      <div class = "state3">
+        <h1> Lift Off! </h1>
+      </div>
+
+      <div class = "state4">
+        <h1> Well done! </h1>
+        <button class = "submit" onclick="changeState(1);"> Do it again! </button>
+      </div>
+
+      <div class = "state5">
+        <h1> Oh No!!! </h1>
+        <button class = "submit"  onclick="changeState(1);"> Try again </button>
+      </div>
+
+    </div>
+
+    <div class = "right">
+      <div class = "rocket">
+      </div>
+
+      <div class = "ground">
+      </div>
+
+    </div>
+     <!-- <button onclick="car.fly();">Click me </button>
+
+     <script>
+     function myFunction() {
+       document.getElementById("demo").innerHTML = "Hello World";
+     }
+     </script> -->
+
   </body>
 
 </html>
