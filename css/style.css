@@ -17,6 +17,10 @@
 
 }
 
+.leftText{
+  margin: auto;
+  text-align: center;
+}
 
 .ground{
   background-color: green;
