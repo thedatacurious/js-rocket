@@ -1,16 +1,18 @@
+
+
 .left{
-  background-color: aquamarine;
+  background-color: white;
   position: fixed;
-  width: 50%;
+  width: 30%;
   height: 100%;
   top: 0;
   left:0;
 }
 
 .right{
-  background-color: cyan;
+  background-image: url("../img/sky.jpg");
   position: fixed;
-  width: 50%;
+  width: 70%;
   height: 100%;
   top: 0;
   right:0;
@@ -20,34 +22,77 @@
 .leftText{
   margin: auto;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.rocket{
+  position: fixed;
+  left: 50%;
+  bottom: -20px;
+  width: 400px;
+  height: 400px;
+  background: url("../img/bananaRocket.png") no-repeat 0 0;
+  transition: bottom 10000ms;
 }
 
 .ground{
-  background-color: green;
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   width: 100%;
   height: 20px;
+  background: url("../img/ground.png") no-repeat center center;
 }
 
-.rocket{
-  position:absolute;
-  left: 50%;
-  bottom: 20px;
-  width: 20px;
-  height: 100px;
-  background-color: silver;
-  transition: bottom 10000ms;
+.nervous{
+  position: absolute;
+  top: 200px;
+  left: 40%;
+  width: 250px;
+  height: 250px;
+  background: url("../img/nervous.png") no-repeat 0 0;
+  display: none;
+}
+
+.nervous.show{
+  display:block;
+}
+
+.cantwait{
+  position: absolute;
+  top: 400px;
+  left: 10%;
+  width: 250px;
+  height: 250px;
+  background: url("../img/cantwait.png") no-repeat 0 0;
+  display: none;
+}
+
+.cantwait.show{
+  display:block;
+}
+
+
+body.body-state1 .rocket{
+  transition: none;
+}
+
+body.body-state2 .rocket{
+  background-image: url("../img/bananaRocketState2.gif");
 }
 
 body.body-state3 .rocket,
 body.body-state4 .rocket{
   bottom: 1000px;
+  background-image: url("../img/bananaRocketState3.gif");
 }
 
-body.body-state1 .rocket{
-  transition: none;
+body.body-state5 .rocket{
+  background-image: url("../img/boom.png");
+  width: 250px;
+  height: 250px;
 }
 
 .state1,
@@ -71,7 +116,7 @@ body.body-state5 .state5{display: block;}
  -webkit-border-radius: 5px;
  border-radius: 6px;
  color: #fff;
- font-family: 'Oswald';
+ /* font-family: 'Oswald'; */
  font-size: 20px;
  text-decoration: none;
  border: none;
@@ -79,7 +124,7 @@ body.body-state5 .state5{display: block;}
 
 .submit:hover {
  /* border: none; */
- background: green;
+ background: aquamarine;
  box-shadow: 0px 0px 1px #777;
 }
 
@@ -90,7 +135,7 @@ body.body-state5 .state5{display: block;}
  -webkit-border-radius: 5px;
  border-radius: 6px;
  color: #fff;
- font-family: 'Oswald';
+ /* font-family: 'Oswald'; */
  font-size: 20px;
  text-decoration: none;
  border: none;

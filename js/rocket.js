@@ -30,13 +30,27 @@ let changeState = function(state){
   var countdownNum = 10;
   document.getElementById('countdown').innerHTML = countdownNum;
   document.body.className = 'body-state'+ state;
+  document.getElementById('cantwait').className = 'cantwait';
+  document.getElementById('nervous').className = 'nervous';
 
   if (state == 2){
           timer = setInterval(function(){
           countdownNum -= 1;
           document.getElementById('countdown').innerHTML = countdownNum;
+
+          if (countdownNum >=7){
+            document.getElementById('cantwait').className = 'cantwait show';
+          }
+          else {document.getElementById('cantwait').className = 'cantwait'}
+
+          if (countdownNum >= 3 && countdownNum < 5){
+            document.getElementById('nervous').className = 'nervous show';
+          }
+          else {document.getElementById('nervous').className = 'nervous'}
+
           if (countdownNum <=0){
             changeState(3);
+
           }
     }, 600);
   }
